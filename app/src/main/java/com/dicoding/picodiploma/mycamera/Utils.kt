@@ -44,8 +44,3 @@ private fun getImageUriForPreQ(context: Context): Uri {
     )
     //content://com.dicoding.picodiploma.mycamera.fileprovider/my_images/MyCamera/20230825_133659.jpg
 }
-
-fun createCustomTempFile(context: Context): File {
-    val filesDir = context.getExternalFilesDir(Environment.DIRECTORY_PICTURES)
-    return File.createTempFile(timeStamp, ".jpg", filesDir)
-}
