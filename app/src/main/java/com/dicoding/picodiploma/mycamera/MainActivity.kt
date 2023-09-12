@@ -116,6 +116,7 @@ class MainActivity : AppCompatActivity() {
     private fun uploadImage() {
         currentImageUri?.let { uri ->
             val imageFile = uriToFile(uri, this).reduceFileImage()
+            Log.d("Image File", "showImage: ${imageFile.path}")
             val description = "Ini adalah deksripsi gambar"
 
             val requestBody = description.toRequestBody("text/plain".toMediaType())
